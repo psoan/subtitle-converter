@@ -8,7 +8,7 @@ class SubtitleConverter:
     def get_subtitle(self) -> str:
         with open(self.subtitle, 'r') as subtitle_file:
             subtitle_contents = subtitle_file.read()
-            subtitle_file.close
+            subtitle_file.close()
         return subtitle_contents
 
     def to_srt(self) -> str:
@@ -33,7 +33,7 @@ class SubtitleConverter:
         new_file_name = f'{file_name}.srt'
         with open(f'{new_file_name}', 'w') as new_file:
             new_file.write(srt)
-            new_file.close
+            new_file.close()
         return new_file_name
     
     def to_vtt(self) -> str:
@@ -46,5 +46,5 @@ class SubtitleConverter:
         new_file_name = f'{file_name}.vtt'
         with open(f'{new_file_name}', 'w') as new_file:
             new_file.write(vtt)
-            new_file.close
+            new_file.close()
         return new_file_name
